@@ -14,6 +14,10 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
+    apt-get update -y
+    apt-get install nodejs -y
+    mkdir helloworld 
+    cd helloworld
+    npm init
+    npm install express --save
   displayName: 'Run a multi-line script'
