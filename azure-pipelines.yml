@@ -15,9 +15,8 @@ steps:
 
 - script: |
     apt-get update -y
-    apt-get install nodejs -y
+    apt-get install nodejs docker.io -y
     mkdir helloworld 
     cd helloworld
-    npm init
-    npm install express --save
+    docker build -t hello-world .
   displayName: 'Run a multi-line script'
